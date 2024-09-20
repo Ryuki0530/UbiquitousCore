@@ -1,4 +1,5 @@
 <?php
+//仮想IoTオブジェクトの雛型
 class ubiObj {
     public $name;
 

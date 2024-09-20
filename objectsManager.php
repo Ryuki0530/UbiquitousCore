@@ -17,6 +17,8 @@ class objectsManager {
         return false;
     }
 
+
+
     // キュー内のインスタンスを5分間保持し、その後消滅
     public function cleanUpQueue() {
         // 実際のタイマー処理をここに追加（省略）

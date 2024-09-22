@@ -1,5 +1,8 @@
 <?php
+echo("Loaded ubiCoreMain.<br>");
+
 require_once 'objectsManager.php';
+require_once 'ubiObj.php';
 require_once './objects/std.php';
 
 // デバイス管理用のインスタンスを作成
@@ -20,6 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $manager->addDevice($newObject);
 
     // デバイスの処理を実行
-    $newObject->process();
+    //$newObject->process();
 }
 ?>
+
+

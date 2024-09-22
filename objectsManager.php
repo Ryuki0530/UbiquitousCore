@@ -1,9 +1,13 @@
 <?php
+echo("Loaded objectManager.<br>");
+
 class objectsManager {
     public $deviceQueue = [];
 
     // インスタンスをキューに追加
     public function addDevice($device) {
+        
+
         $this->deviceQueue[] = $device;
     }
 

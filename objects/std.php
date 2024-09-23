@@ -1,12 +1,16 @@
 <?php
 echo("Loaded standard objects.<br>");
 
-//仮想IoTオブジェクトのプロパティ
-
-//ドア
+// ドア
 class Door extends ubiObj {
-    public function __construct(){
+    private $manager;
+
+    public function __construct($name, $manager) {
+        parent::__construct($name);
+        $this->manager = $manager;
         echo "Door\n";
+
+        // キュー内に Sunscreen があるか確認
         if ($this->manager->searchDevice('Sunscreen')) {
             echo "いってらっしゃい\n";
         } else {
@@ -15,10 +19,13 @@ class Door extends ubiObj {
     }
 }
 
-//日焼け止め
+// 日焼け止め
 class Sunscreen extends ubiObj {
-    public function __construct(){
+    private $manager;
+
+    public function __construct($name, $manager) {
+        parent::__construct($name);
+        $this->manager = $manager;
         echo "Sunscreen\n";
     }
 }
-?>

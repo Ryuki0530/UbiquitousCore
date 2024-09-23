@@ -1,5 +1,5 @@
 <?php
-echo("Loaded standard objects.<br>");
+//echo("Loaded standard objects.<br>");
 
 // ドア
 class Door extends ubiObj {

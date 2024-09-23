@@ -1,5 +1,5 @@
 <?php
-echo("Loaded ObjectsSuperClass.<br>");
+//echo("Loaded ObjectsSuperClass.<br>");
 
 //仮想IoTオブジェクトの雛型
 class ubiObj {

@@ -4,8 +4,11 @@
 require_once 'objectsManager.php';
 require_once 'ubiObj.php';
 require_once './objects/std.php';
+require_once './objects/stabs.php';
 
 session_start();  // セッションを開始
+
+$weatherInfo = new weatherInfo();
 
 // 既存のオブジェクトマネージャがセッションにある場合はそれを使用
 if (isset($_SESSION['manager'])) {
@@ -26,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($objectType === 'Sunscreen') {
         $newObject = new Sunscreen($objectName, $manager);
     } elseif ($objectType === 'Door') {
-        $newObject = new Door($objectName, $manager);
+        $newObject = new Door($objectName, $manager, $weatherInfo);
     }
 
     // 新しいデバイスをキューに追加

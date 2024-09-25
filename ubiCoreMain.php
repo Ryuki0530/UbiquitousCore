@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "Received POST data: device_type = $objectType, device_name = $objectName<br>";
 
     if ($objectType === 'Sunscreen') {
-        $newObject = new Sunscreen($objectName, $manager);
+        $newObject = new Sunscreen($objectName, $manager,$weatherInfo);
     } elseif ($objectType === 'Door') {
         $newObject = new Door($objectName, $manager, $weatherInfo);
     }

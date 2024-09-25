@@ -9,15 +9,13 @@ getWeatherで天気情報を取得可能
 */
 class weatherInfo extends ubiObj{
     private $manager;
-
     public function __construct() {
         echo("weatherInfo Start \n");
     }
     
-    public function getWeather($hour){
-        echo("weather info :");
-        echo($hour-1);
-        return $hour-1;
+    public function getWeather(){
+        $ans = 1;
+        return $ans;
     }
 
     public function dumpWeather(){

@@ -30,6 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $newObject = new Sunscreen($objectName, $manager,$weatherInfo);
     } elseif ($objectType === 'Door') {
         $newObject = new Door($objectName, $manager, $weatherInfo);
+    } elseif ($objectType === 'umbrella') {
+        $newObject = new Umbrella($objectName, $manager, $weatherInfo);
     }
 
     // 新しいデバイスをキューに追加

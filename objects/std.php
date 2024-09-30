@@ -45,3 +45,20 @@ class Sunscreen extends ubiObj {
         }
     }
 }
+
+// 傘
+class Umbrella extends ubiObj {
+    private $manager;
+
+    public function __construct($name, $manager, $weatherInfo ) {
+        parent::__construct($name);
+        $this->manager = $manager;
+        $this->weatherInfo = $weatherInfo;
+        echo "umbrella\n";
+
+        if ($this->weatherInfo->getWeather() === 2) {
+        }else{
+            echo "今日は雨の予報がありません。\n";
+        }
+    }
+}

@@ -3,9 +3,10 @@
 
 class objectsManager {
     public $deviceQueue = [];
+    public $messageQueue = [];
 
      // インスタンスをキューに追加
-     public function addDevice($device) {
+    public function addDevice($device) {
         $this->deviceQueue[] = $device;
         echo "Added device: " . get_class($device) . "\n";  // デバイスが追加されたことを確認
     }

@@ -1,6 +1,36 @@
 <?php
 //echo("Loaded standard objects.<br>");
 
+//フレームワーク
+class Sample extends ubiObj {
+    private $manager;
+
+    public function __construct($name, $manager,$weatherInfo ) {
+        parent::__construct($name);
+        $this->manager = $manager;
+        $this->weatherInfo = $weatherInfo;
+        
+        echo "Sample\n";
+
+        //天気
+        if ($this->weatherInfo->getWeather() === 0/*必要に応じて*/) {
+        }else{
+        }
+
+        //他のデバイスの有無に応じて
+        if ($this->manager->searchDevice('Sample')) {
+        } else {
+        }
+    }
+}
+
+
+
+
+
+
+
+
 // ドア
 class Door extends ubiObj {
     private $manager;
@@ -18,6 +48,12 @@ class Door extends ubiObj {
                 echo "いってらっしゃい\n";
             } else {
                 echo "日焼け止めを塗ってから外出しましょう\n";
+            }
+        }else if($this->weatherInfo->getWeather() === 2){
+            if($this->manager->searchDevice('Umbrella')) {
+                echo "傘は忘れずに持ち帰りましょう。";
+            }else{
+                echo "今日は雨の予報です。傘を持って出かけましょう。";
             }
         }
         else{

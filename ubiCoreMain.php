@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $newObject = new Sunscreen($objectName, $manager,$weatherInfo);
     } elseif ($objectType === 'Door') {
         $newObject = new Door($objectName, $manager, $weatherInfo);
-    } elseif ($objectType === 'umbrella') {
+    } elseif ($objectType === 'Umbrella') {
         $newObject = new Umbrella($objectName, $manager, $weatherInfo);
     }
 

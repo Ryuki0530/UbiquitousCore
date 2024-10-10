@@ -14,7 +14,7 @@ class weatherInfo extends ubiObj{
     }
     
     public function getWeather(){
-        $ans = 1;
+        $ans = 5;
         return $ans;
     }
 
